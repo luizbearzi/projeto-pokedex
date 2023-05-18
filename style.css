@@ -1,0 +1,58 @@
+html, body {
+    margin: 0;
+    padding: 0;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #1e1e1e;
+    color: #e1e1e1 ;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto; /* para centralizar a div container */
+}
+
+.header {
+    text-align: center;
+}
+
+.cards {
+    display: flex; /* para usar propriedades flex para colocar um card do lado do outro */
+    flex-wrap: wrap; /* para quando ocupar todo o espaço ele quebrar a linha */
+     
+}
+
+.card {
+    width: calc(25% -20px);
+    margin: 10px;
+    text-align: center;
+    padding: 20px;
+    background-color: #3d3d3d;
+    border-radius: 10px;
+}
+
+.card .title h2 {
+    padding: 0; 
+    margin: 0;
+    text-transform: capitalize;
+}
+
+.card .img img {
+    max-width: 220px;
+}
+
+.card .type {
+    color: #1e1e1e;
+    border-radius: 10px;
+    padding: 10px;
+    text-transform: uppercase;
+    font-weight: bolder;
+    letter-spacing: 4px;
+    background-color: #9dd465;
+}

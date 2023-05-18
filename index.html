@@ -13,22 +13,39 @@
         <div class="header">
             <h1>Pokedex</h1>
         </div>
-        <div class="cards">
-            <div class="card"></div>
-            <div class="title">
-                <h2>Bulbasaur</h2>
-                <small># 1</small>
-            </div>
-            <div class="img">
-                <img src="" alt="">
-            </div>
-            <button class="favorite">
-                <div class="heart">
-                    
+        <div class="cards"> 
+            <div class="card"> <!-- // card //-->
+                <div class="title">
+                    <h2>Bulbasaur</h2>
+                    <small># 1</small>
                 </div>
-            </button>
+                <div class="img">
+                    <img src="https://assets.pokemon.com/assets/cms2/img/pokedex/full/001.png" alt="">
+                </div>
+                <div class="type">
+                    <p>Grass</p>
+                </div>
+                <button class="favorite">
+                    <div class="heart">
+                        
+                    </div>
+                </button>
+            </div> <!-- // card //-->
+
         </div>
+
      </div>
+
+     <script>
+        // Exemplo de clone de objetos
+        const cards = document.querySelector('.cards')
+        const card = document.querySelector('.card')
+        for (let i = 0; i < 30; i++) {
+            const clone = card.cloneNode(true)
+            cards.appendChild(clone)
+        }
+        // fim exemplo de clone de objetos
+     </script> 
     
 </body>
 </html>
