@@ -43,6 +43,14 @@ body {
     text-transform: capitalize;
 }
 
+.card .img {
+    margin: 40px auto;
+    width: 220px;
+    height: 220px;
+    border-radius: 50%;
+    background-color: #9dd465;
+}
+
 .card .img img {
     max-width: 220px;
 }
@@ -55,4 +63,28 @@ body {
     font-weight: bolder;
     letter-spacing: 4px;
     background-color: #9dd465;
+}
+
+.card .type p {
+   margin: 0; 
+}
+
+.card .favorite {
+    display: none;
+}
+
+/* media queries  de tamanho da tela*/
+
+/* até o tamanho de 1244px de largura -> tablets */
+@media screen and (max-width: 1244px) {
+    .card {
+        width: calc(50% - 20px);
+    }
+}
+
+/* até o tamanho de 768px de largura -> celulares */
+@media screen and (max-width: 768px) {
+    .card {
+        width: calc(50% - 20px);
+    }
 }
