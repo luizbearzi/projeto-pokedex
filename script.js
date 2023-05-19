@@ -38,6 +38,8 @@ const cardHTMl = `
 </div>
 `
 
+const cards = document.querySelector('.cards')
+
 const getType = (data) => {
     const apiTypes = data.map(type => type.type.name)
     const type = types.find(type => apiTypes.indexOf(type ) > -1)
@@ -54,16 +56,26 @@ const fetchPokemon = async (number) => {
 }
 
 const replacer = (text, source, destination) => {
-   const regex = new RegExp()
+   const regex = new RegExp(source, 'gi')
+   return text.replace(regex, destination)
 }
 
 const createPokemonCard = (pokemon) => {
-    
+
+    const {id, name, type} = pokemon
+    let newCard = replacer(cardHTMl, `\{id\}`, id)
+    newCard = replacer(newCard, `\{name\}`, name)
+    newCard = replacer(newCard, `\{type\}`, type)
+
+    cards.innerHTML += newCard
+
+
 }
 
 const fetchPokemons = async() => {
     for (let i = 1; i <=  POKEMON_COUNT; i++) {
         const pokemon = await fetchPokemon(i)
+        createPokemonCard(pokemon)
     }
 }
  
